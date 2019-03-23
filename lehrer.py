@@ -14,9 +14,22 @@ class Lehrer:
                       # Alle Lehrer haben eine Befaehigung, wenige haben bis zu 3 
                       # Die meisten Lehrer haben zwei
 
+    def setData(self, name, vorname, nachname, minusstunden = 0.0 , soll = 0.0, abteilungen = [], lfb = []):
+        self.name = name
+        self.vorname = vorname
+        self.nachname = nachname
+        self.minusstunden = minusstunden
+        self.soll = soll
+        self.abteilungen = abteilungen
+        self.lfb = lfb
+
+        self.debug()
+    
     def debug(self):
         """ Diese Methode soll die Daten eines Lehrer uebersichtlich
         darstellen, so dass man testen kann, ob das Einlesen und speichern
         der Daten geklappt hat
         """
-        print(self.nachname)
+        print("Der Lehrer heißt ", self.name, " " , self.nachname)
+
+
