@@ -1,7 +1,5 @@
 class Lehrer:
     def __init__(self):
-        print("Neuer Lehrer erstellt")
-
         self.name = ""
         self.vorname = ""
         self.nachname = ""
@@ -30,6 +28,6 @@ class Lehrer:
         darstellen, so dass man testen kann, ob das Einlesen und speichern
         der Daten geklappt hat
         """
-        print("Der Lehrer heißt", self.vorname, self.nachname, ". Das Kürzel ist", self.name)
+        print("Der neue Lehrer heißt", self.vorname, self.nachname, ". Das Kürzel ist", self.name)
 
 
