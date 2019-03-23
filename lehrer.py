@@ -6,7 +6,7 @@ class Lehrer:
         self.vorname = ""
         self.nachname = ""
         self.minusstunden = 0.0 # Wie viele Minusstunden hat ein Lehrer auf dem Konto?
-        self.soll = 0.0 # Wie viel Unterrich muss ein Lehrer geben?
+        self.soll = 0.0 # Wie viel Unterricht muss ein Lehrer geben?
         self.abteilungen = [] # Eine Abteilung ist z.B. "GSW-Faecher" oder "NTW"
         self.lfb = [] # Welche Lehrbefaehigungen hat ein Lehrer. Zum Beispiel Bio+Chemie gy 
                       # waere dann BI (2 -  3); CH (2 - 3)
