@@ -57,8 +57,19 @@ def dateiEinlesen():
     return liste
 
 
+def generiererFachListe(lehrer):
+    fachliste = []
+
+    for l in lehrer:
+        for lfb in l.lfb:
+            print(lfb)
+
 
 # alle Lehrer werden aus der CSV-Datei eingelesen und in der Liste gespeichert.
 # Danach liegen diese als LIste vor. Anleitung dazu hier:
 # https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 lehrerliste = dateiEinlesen()
+
+generiererFachListe(lehrerliste)
+
+
