@@ -9,6 +9,9 @@ from lehrer import *
 
 
 def dateiEinlesen():
+    """Diese Methode liest die CSV-Datei ein und gibt am Ende eine
+    Liste aller Lehrer zurueck. Dabei gibt es ein Listenelement pro Lehrer
+    """
     liste = []
 
     path = "lehrerdaten.CSV"
@@ -19,6 +22,7 @@ def dateiEinlesen():
 
     header = next(reader)  # Die erste Zeile ist die Ueberschrift
 
+    # Zeilenweise die gesamte Datei durchgehen und pro Zeile ein Listenelement erzeugen
     for row in reader:
 
         abteilungen = []
