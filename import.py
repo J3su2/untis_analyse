@@ -50,7 +50,7 @@ def dateiEinlesen():
         lernbefaehigungen.append(lbf3)
 
         lehrer = Lehrer()
-        lehrer.setData(kuerzel, vorname, name, ist, soll, lernbefaehigungen, abteilungen)
+        lehrer.setData(kuerzel, vorname, name, ist, soll, abteilungen, lernbefaehigungen)
 
         liste.append(lehrer)
 
@@ -59,10 +59,18 @@ def dateiEinlesen():
 
 def generiererFachListe(lehrer):
     fachliste = []
+    fachbereichsliste = []
 
     for l in lehrer:
         for lfb in l.lfb:
-            print(lfb)
+            if lfb not in fachliste:
+                fachliste.append(lfb)
+        
+        for abteilung in l.abteilungen:
+            if abteilung not in fachbereichsliste:
+                fachbereichsliste.append(abteilung)
+
+    return fachliste, fachbereichsliste
 
 
 # alle Lehrer werden aus der CSV-Datei eingelesen und in der Liste gespeichert.
@@ -70,6 +78,7 @@ def generiererFachListe(lehrer):
 # https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 lehrerliste = dateiEinlesen()
 
-generiererFachListe(lehrerliste)
-
-
+# In Python koennen auch 2 oder mehr Objekte gleichzeitig
+# zurueckgegeben werden, daher kann man hier alles in einem Rutsch
+# in zwei Objekten speichern
+fachliste, fachbereichsliste = generiererFachListe(lehrerliste)
