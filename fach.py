@@ -14,4 +14,11 @@ class Fach:
 
         self.lehrerlist.append( leh )
 
+    def lehrerAuflisten(self):
+        """diese Methode soll alle Lehrer auflisten, die dieses
+        Fach unterrichten
+        """
+        for lehrer in self.lehrerlist:
+            print(lehrer.debug)
+
     
