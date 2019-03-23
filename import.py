@@ -58,6 +58,10 @@ def dateiEinlesen():
 
 
 def generiererFachListe(lehrer):
+    """ Diese Methode geht alle Lehrer durch und generiert zwei Listen.
+    Einmal die Liste alle Fachbereiche (Abteilungen), einmal die aller 
+    Faecher (also Mathe, Biologie, Kunst und so weiter)
+    Am Ende werden beide Liste zurueckgegeben """
     fachliste = []
     fachbereichsliste = []
 
