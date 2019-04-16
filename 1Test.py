@@ -16,7 +16,7 @@ df.to_csv("D:/Desktop/Projekt dv ni/lehrerdatenexport.txt", sep=";", index=False
 
 
 #-------------------------------------Notizen----------------------------------------------------------------------------------------
-# print(df)
+#print(df)
 #print (df.columns)
 #print (df[["Name", "Ist-Soll"]][0:5]) 
 #print(df.describe())
